@@ -3,4 +3,5 @@
     <string name="menu_button">opens menu</string>
     <string name="logo">app logo</string>
     <string name="user_button">opens userprofile</string>
+    <string name="button">Button</string>
 </resources>

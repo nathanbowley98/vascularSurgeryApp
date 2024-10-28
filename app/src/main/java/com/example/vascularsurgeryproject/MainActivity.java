@@ -18,6 +18,7 @@ public class MainActivity extends BaseActivity {
 
         // Find the toolbar and set it as the ActionBar
         setupToolbar();
+        setupScrollView();
 
     }
 }

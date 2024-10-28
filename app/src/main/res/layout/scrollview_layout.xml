@@ -1,104 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="4dp"
-    android:paddingRight="4dp">
-
-    <ScrollView
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="178dp"
+    android:layout_marginBottom="100dp"
+    android:verticalScrollbarPosition="left"
+    android:scrollbarSize="10dp"
+    >
+    <!--   Needed by ScrollView     -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="178dp"
-        android:layout_marginBottom="100dp"
-        android:verticalScrollbarPosition="left"
-        android:scrollbarSize="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/scrollview_container"
+        android:paddingStart="14dp"
+        android:paddingEnd="5dp"
         >
-        <!--   Needed ScrollView only takes 1 child     -->
-        <LinearLayout
+        <!--
+                Replace buttons here!
+                Needed to hardcode just
+                to show that scroll works,
+                replace as needed :)
+        -->
+        <Button
+            android:id="@+id/button1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            >
-            <!--
-                    Replace buttons here!
-                    Needed to hardcode just
-                    to show that scroll works,
-                    replace as needed :)
-            -->
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginBottom="10dp"
-                android:backgroundTint="#AE94E2"
-                android:text="@string/button"
-                android:textColor="#FFFFFF" />
+            android:layout_height="80dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#AE94E2"
+            android:text="@string/button"
+            android:textColor="#FFFFFF" />
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginBottom="10dp"
-                android:backgroundTint="#AE94E2"
-                android:text="@string/button"
-                android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#AE94E2"
+            android:text="@string/button"
+            android:textColor="#FFFFFF" />
 
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginBottom="10dp"
-                android:backgroundTint="#AE94E2"
-                android:text="@string/button"
-                android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#AE94E2"
+            android:text="@string/button"
+            android:textColor="#FFFFFF" />
 
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginBottom="10dp"
-                android:backgroundTint="#AE94E2"
-                android:text="@string/button"
-                android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#AE94E2"
+            android:text="@string/button"
+            android:textColor="#FFFFFF" />
 
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginBottom="10dp"
-                android:backgroundTint="#AE94E2"
-                android:text="@string/button"
-                android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#AE94E2"
+            android:text="@string/button"
+            android:textColor="#FFFFFF" />
 
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginBottom="10dp"
-                android:backgroundTint="#AE94E2"
-                android:text="@string/button"
-                android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#AE94E2"
+            android:text="@string/button"
+            android:textColor="#FFFFFF" />
 
-            <Button
-                android:id="@+id/button7"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginBottom="10dp"
-                android:backgroundTint="#AE94E2"
-                android:text="@string/button"
-                android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#AE94E2"
+            android:text="@string/button"
+            android:textColor="#FFFFFF" />
 
-            <Button
-                android:id="@+id/button8"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginBottom="10dp"
-                android:backgroundTint="#AE94E2"
-                android:text="@string/button"
-                android:textColor="#FFFFFF" />
-        </LinearLayout>
-    </ScrollView>
-</RelativeLayout>
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#AE94E2"
+            android:text="@string/button"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</ScrollView>

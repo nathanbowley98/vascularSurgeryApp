@@ -18,12 +18,12 @@
     <include
         android:id="@+id/scrollview"
         layout="@layout/scrollview_layout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="178dp"
+        android:layout_marginBottom="80dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

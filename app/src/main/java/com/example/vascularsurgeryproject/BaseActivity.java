@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.os.Bundle;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.util.Objects;
@@ -36,6 +37,12 @@ public class BaseActivity extends AppCompatActivity {
             // Show a toast message when the right button is pressed
             Toast.makeText(this, "Right button pressed!", Toast.LENGTH_SHORT).show();
         });
+    }
+
+    protected void setupScrollView() {
+        LinearLayout linearLayout = findViewById(R.id.scrollview_container);
+        //Dynamically build buttons here or in another class, inserts into linearlayout
+        //which is the container inside scrollview
     }
 }
 

@@ -1,0 +1,9 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Set the color of the AppBar background -->
+    <solid android:color="?attr/colorAccent" />
+
+    <!-- Set the corner radius for the rounded corners -->
+    <corners android:radius="16dp" />
+</shape>

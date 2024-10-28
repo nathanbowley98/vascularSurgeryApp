@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- For the dark theme here. -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="potPourri">#FFf1e4d9</color>
+    <color name="governorBay">#FF3E2AB6</color>
+    <color name="luckyPoint">#FF271b73</color>
+    <color name="cornflowerBlue">#FF8475ff</color>
+    <color name="dullLavender">#FF9b92e8</color>
+    <color name="royalBlue">#FF5e4fd9</color>
+    <color name="monzaRed">#FFCC000E</color>
+
+    <!-- For the light theme here. -->
+    <color name="botticelli">#FFcbe4e7</color>
+    <color name="rockBlue">#FF99bdcc</color>
+    <color name="veniceBlue">#FF045a86</color>
+    <color name="jungleMist">#FFc1d0d9</color>
+    <color name="catskillWhite">#FFf2f8f9</color>
+
 </resources>

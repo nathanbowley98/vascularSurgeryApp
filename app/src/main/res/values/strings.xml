@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">VascularSurgeryProject</string>
+    <string name="menu_button">opens menu</string>
+    <string name="logo">app logo</string>
+    <string name="user_button">opens userprofile</string>
 </resources>

@@ -39,10 +39,16 @@ public class BaseActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Gets the scrollview where buttons are going to be inserted
+     * Remove the placeholder buttons in scrollview_layout.xml,
+     * make sure you are in code mode not design!
+     * @see res/layout/scrollview_layout.xml
+     */
     protected void setupScrollView() {
         LinearLayout linearLayout = findViewById(R.id.scrollview_container);
-        //Dynamically build buttons here or in another class, inserts into linearlayout
-        //which is the container inside scrollview
+        //linearlayout container which is the container inside
+        //scrollview and holds the buttons
     }
 }
 

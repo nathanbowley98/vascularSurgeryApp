@@ -39,6 +39,38 @@ public class BaseActivity extends AppCompatActivity {
         });
     }
 
+    // Creates the bottom app bar
+    protected void setupBottomBar() {
+        Toolbar toolbar = findViewById(R.id.bottom_bar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+            Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
+        }
+
+        // Find the buttons in the toolbar layout
+        ImageButton btnBack = findViewById(R.id.btn_back);
+        ImageButton btnStar = findViewById(R.id.btn_star);
+        ImageButton btnShare = findViewById(R.id.btn_share);
+
+        // Set a click listener for the left button
+        btnBack.setOnClickListener(v -> {
+            // Show a toast message when the left button is pressed
+            Toast.makeText(this, "Left button pressed!", Toast.LENGTH_SHORT).show();
+        });
+
+        // Set a click listener for the middle button
+        btnStar.setOnClickListener(v -> {
+            // Show a toast message when the middle button is pressed
+            Toast.makeText(this, "Middle button pressed!", Toast.LENGTH_SHORT).show();
+        });
+
+        // Set a click listener for the right button
+        btnShare.setOnClickListener(v -> {
+            // Show a toast message when the right button is pressed
+            Toast.makeText(this, "Right button pressed!", Toast.LENGTH_SHORT).show();
+        });
+    }
+
     /**
      * Gets the scrollview where buttons are going to be inserted
      * Remove the placeholder buttons in scrollview_layout.xml,

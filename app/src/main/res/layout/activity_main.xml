@@ -12,7 +12,11 @@
         android:id="@+id/include"
         layout="@layout/toolbar_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="80dp"/>
+        <!-- Changed the "wrap_content" setting
+        from above line because the bar was too big;
+        this was the only way I knew to make it smaller-->
+
 
     <!-- Scrollview Container -->
     <include

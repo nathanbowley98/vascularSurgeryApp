@@ -6,10 +6,6 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.widget.SearchView;
 
 import java.util.Objects;
 
@@ -86,37 +82,5 @@ public class BaseActivity extends AppCompatActivity {
         //linearlayout container which is the container inside
         //scrollview and holds the buttons
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.search_menu, menu); // Highlighted: Inflating the search menu
-        MenuItem searchItem = menu.findItem(R.id.action_search);
-        SearchView searchView = (SearchView) searchItem.getActionView();
-
-        searchView.setQueryHint("Search...");
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                onSearchQuerySubmit(query); // Highlighted: Search query submit callback
-                return true;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                onSearchQueryChange(newText); // Highlighted: Search query change callback
-                return true;
-            }
-        });
-        return true;
-    }
-
-    // Highlighted: Method for handling query submission
-    protected void onSearchQuerySubmit(String query) {
-        // To be overridden in subclasses if needed
-    }
-
-    // Highlighted: Method for handling query text changes
-    protected void onSearchQueryChange(String newText) {
-        // To be overridden in subclasses if needed
-    }
 }
+

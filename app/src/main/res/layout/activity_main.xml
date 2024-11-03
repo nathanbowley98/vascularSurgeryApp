@@ -9,20 +9,10 @@
 
     <!-- Include the custom toolbar -->
     <include
-        android:id="@+id/include_toolbar"
+        android:id="@+id/include"
         layout="@layout/toolbar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
-    <!-- Include the search bar -->
-    <include
-        android:id="@+id/include_search"
-        layout="@layout/search_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:queryHint="Search here"
-        app:layout_constraintTop_toBottomOf="@id/include_toolbar"
-        android:layout_margin="8dp"/>
 
     <!-- Scrollview Container -->
     <include
@@ -34,12 +24,11 @@
         android:layout_marginEnd="10dp"
         android:layout_marginTop="178dp"
         android:layout_marginBottom="80dp"
-        app:layout_constraintTop_toBottomOf="@id/include_search"
-        app:layout_constraintBottom_toTopOf="@id/include_bottom" />
+        />
 
     <!-- Include the bottom bar -->
     <include
-        android:id="@+id/include_bottom"
+        android:id="@+id/include"
         layout="@layout/bottom_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

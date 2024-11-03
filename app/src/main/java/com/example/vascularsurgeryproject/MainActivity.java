@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -72,5 +73,21 @@ public class MainActivity extends BaseActivity {
                 startActivity(new Intent(MainActivity.this, Diagnostics_and_Imaging.class));
             }
         });
+    }
+
+    @Override
+    protected void onSearchQuerySubmit(String query) {
+        super.onSearchQuerySubmit(query);
+        // Handle the search query submission specific to MainActivity
+        Toast.makeText(this, "Search submitted: " + query, Toast.LENGTH_SHORT).show();
+        // Add more logic here, such as filtering a list or updating UI
+    }
+
+    @Override
+    protected void onSearchQueryChange(String newText) {
+        super.onSearchQueryChange(newText);
+        // Handle the live search query text change specific to MainActivity
+        Toast.makeText(this, "Search text: " + newText, Toast.LENGTH_SHORT).show();
+        // Add logic for live filtering or suggestions here
     }
 }

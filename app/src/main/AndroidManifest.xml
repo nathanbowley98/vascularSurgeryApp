@@ -13,24 +13,6 @@
         android:theme="@style/Theme.VascularSurgeryProject"
         tools:targetApi="31">
         <activity
-            android:name=".Anatomy"
-            android:exported="false" />
-        <activity
-            android:name=".Diagnostics_and_Imaging"
-            android:exported="false" />
-        <activity
-            android:name=".Clinical_Reference"
-            android:exported="false" />
-        <activity
-            android:name=".Pathophysiology"
-            android:exported="false" />
-        <activity
-            android:name=".Physiology"
-            android:exported="false" />
-        <activity
-            android:name=".Rotations_Essentials"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

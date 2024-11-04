@@ -4,4 +4,10 @@
     <string name="logo">app logo</string>
     <string name="user_button">opens userprofile</string>
     <string name="button">Button</string>
+    <string name="Anatomy">Anatomy</string>
+    <string name="Physiology">Physiology</string>
+    <string name="Pathophysiology">Pathophysiology</string>
+    <string name="Clinical_Reference">Clinical Reference</string>
+    <string name="Diagnostics_and_Imaging">Diagnostics and Imaging</string>
+    <string name="Rotations_Essentials">Rotations Essentials</string>
 </resources>

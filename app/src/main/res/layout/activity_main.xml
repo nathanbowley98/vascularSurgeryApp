@@ -70,7 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:visibility="gone"
+        android:visibility="visible"
         app:headerLayout="@layout/nav_header"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"

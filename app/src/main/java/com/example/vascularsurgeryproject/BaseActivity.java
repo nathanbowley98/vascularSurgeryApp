@@ -9,7 +9,7 @@ import android.widget.Toast;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.SearchView;
+import androidx.appcompat.widget.SearchView;
 
 import java.util.Objects;
 

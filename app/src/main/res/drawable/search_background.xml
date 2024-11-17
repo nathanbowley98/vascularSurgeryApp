@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background color, adjust the hex color code to match your design -->
+    <solid android:color="#674ea7" />
+
+    <!-- Rounded corners -->
+    <corners android:radius="8dp" />
+
+    <!-- Padding for the content inside the shape -->
+    <padding
+        android:left="8dp"
+        android:right="8dp" />
+</shape>

@@ -9,7 +9,7 @@
 
     <!-- Include the custom toolbar -->
     <include
-        android:id="@+id/include"
+        android:id="@+id/include_toolbar"
         layout="@layout/toolbar_layout"
         android:layout_width="match_parent"
         android:layout_height="80dp"/>
@@ -17,6 +17,16 @@
         from above line because the bar was too big;
         this was the only way I knew to make it smaller-->
 
+    <include
+        android:id="@+id/include_search"
+        layout="@layout/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/include_toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp"
+        android:queryHint="Search here" />
 
     <!-- Scrollview Container -->
     <include
@@ -32,7 +42,7 @@
 
     <!-- Include the bottom bar -->
     <include
-        android:id="@+id/include"
+        android:id="@+id/include_bottom_bar"
         layout="@layout/bottom_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

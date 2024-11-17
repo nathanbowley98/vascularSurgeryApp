@@ -13,6 +13,11 @@ import androidx.appcompat.widget.SearchView;
 
 import java.util.Objects;
 
+/**
+ * BaseActivity Class that can be implemented and cherry picked by any page on the
+ * Application.
+ *
+ */
 public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

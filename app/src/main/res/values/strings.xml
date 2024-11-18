@@ -4,6 +4,8 @@
     <string name="logo">app logo</string>
     <string name="user_button">opens userprofile</string>
     <string name="button">Button</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
     <string name="Anatomy">Anatomy</string>
     <string name="Physiology">Physiology</string>
     <string name="Pathophysiology">Pathophysiology</string>

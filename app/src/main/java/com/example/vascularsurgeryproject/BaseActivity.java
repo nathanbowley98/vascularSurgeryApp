@@ -1,5 +1,7 @@
 package com.example.vascularsurgeryproject;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.os.Bundle;
@@ -10,6 +12,14 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import androidx.appcompat.widget.SearchView;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.example.vascularsurgeryproject.fragments.AboutFragment;
+import com.example.vascularsurgeryproject.fragments.HomeFragment;
+import com.example.vascularsurgeryproject.fragments.SettingsFragment;
+import com.example.vascularsurgeryproject.fragments.ShareFragment;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.Objects;
 
@@ -18,7 +28,10 @@ import java.util.Objects;
  * Application.
  *
  */
-public class BaseActivity extends AppCompatActivity {
+public class BaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    protected DrawerLayout drawerLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,10 +39,27 @@ public class BaseActivity extends AppCompatActivity {
 
     protected void setupToolbar() {
         Toolbar toolbar = findViewById(R.id.vascular_toolbar);
+
         if (toolbar != null) {
             setSupportActionBar(toolbar);
             Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
         }
+        setSupportActionBar(toolbar);
+        //toolbar.setNavigationIcon(R.drawable.ic_menu);
+
+        drawerLayout = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,
+                drawerLayout,
+                toolbar,
+                R.string.open_nav,
+                R.string.close_nav);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+
+        //optionally do stuff with fragments here... see https://www.youtube.com/watch?v=6mgTJdy_di4&ab_channel=AndroidKnowledge
 
         // Find the buttons in the toolbar layout
         ImageButton btnMenu = findViewById(R.id.btn_menu);
@@ -38,7 +68,11 @@ public class BaseActivity extends AppCompatActivity {
         // Set a click listener for the left button
         btnMenu.setOnClickListener(v -> {
             // Show a toast message when the left button is pressed
-            Toast.makeText(this, "Left button pressed!", Toast.LENGTH_SHORT).show();
+            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                drawerLayout.closeDrawer(GravityCompat.START);
+            } else {
+                drawerLayout.openDrawer(GravityCompat.START);
+            }
         });
 
         // Set a click listener for the right button
@@ -124,4 +158,25 @@ public class BaseActivity extends AppCompatActivity {
     protected void onSearchQueryChange(String newText) {
         // To be overridden in subclasses if needed
     }
+
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int itemId = item.getItemId();
+        if (itemId == R.id.nav_home) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+        } else if (itemId == R.id.nav_settings) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).commit();
+        } else if (itemId == R.id.nav_share) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ShareFragment()).commit();
+        } else if (itemId == R.id.nav_about) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AboutFragment()).commit();
+        } else if (itemId == R.id.nav_logout) {
+            Toast.makeText(this, "Logout!", Toast.LENGTH_SHORT).show();
+        }
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+
 }

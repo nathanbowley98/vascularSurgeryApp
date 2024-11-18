@@ -42,5 +42,5 @@ dependencies {
     testImplementation(libs.testng)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation(libs.material.v120alpha04)
+    implementation(libs.material)
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -12,13 +13,14 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+<!--    Creates Toolbar-->
         <include
             android:id="@+id/include_toolbar"
             layout="@layout/toolbar_layout"
             android:layout_width="match_parent"
             android:layout_height="80dp" />
 
-<!--                These are the page buttons in home, scroll functionality might be needed-->
+<!--                These are the page buttons in home, scroll functionality might be needed later-->
 <!--        <include-->
 <!--            android:id="@+id/rootLayout"-->
 <!--            layout=""-->
@@ -26,17 +28,24 @@
 <!--            android:layout_height="match_parent"-->
 <!--            />-->
 
-        <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/rootLayout"
+<!--     This is where the buttons will be generated.-->
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="16dp"
-            android:background="@android:color/white">
+            android:orientation="vertical">
 
-            <!-- Other static UI elements can go here if needed -->
+            <GridLayout
+                android:id="@+id/articleButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignBounds"
+                android:layout_marginTop="75dp"
+                android:columnCount="3"
+                android:rowCount="2"
+                android:orientation="horizontal"
+                android:padding="16dp">
 
+            </GridLayout>
         </LinearLayout>
 
         <!-- Bottom Bar -->
@@ -45,19 +54,6 @@
             layout="@layout/bottom_bar_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
-        <FrameLayout
-            android:id="@+id/fragment_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
-        </FrameLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

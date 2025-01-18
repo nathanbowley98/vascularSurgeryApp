@@ -4,13 +4,13 @@ import android.media.Image;
 
 public class Article {
     private final String title;
-    private final String link;
+    private final String url;
 //    private final Image img;
 
 //    public Article(String title, String link, Image img) {
-    public Article(String title, String link) {
+    public Article(String title, String url) {
         this.title = title;
-        this.link = link;
+        this.url = url;
 //        this.img = img;
     }
 
@@ -18,8 +18,8 @@ public class Article {
         return this.title;
     }
 
-    public String getLink() {
-        return this.link;
+    public String getUrl() {
+        return this.url;
     }
 
 //    public Image getImg() {

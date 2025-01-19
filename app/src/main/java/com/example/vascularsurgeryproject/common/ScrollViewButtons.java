@@ -24,7 +24,7 @@ public class ScrollViewButtons {
     public enum RotationEssentialsButtons {
         ABI_SCORES("ABI Scores"),
         PERIPHERAL_EXAM_B("Peripheral Exam B"),
-        COMMON_BLOOD_WORK_INFO("Common Blood Work Info");
+        COMMON_BLOOD_WORK_INT("Common Blood Work Int");
 
         private final String name;
 

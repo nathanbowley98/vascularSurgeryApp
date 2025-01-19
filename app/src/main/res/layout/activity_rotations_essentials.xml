@@ -10,10 +10,9 @@
     tools:openDrawer="start"
     tools:context=".Rotations_Essentials">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <include
             android:id="@+id/include_toolbar"
@@ -21,16 +20,92 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"/>
 
-        <include
-            android:id="@+id/scrollview"
-            layout="@layout/scrollview_layout"
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginTop="178dp"
+            android:layout_marginTop="80dp"
             android:layout_marginBottom="80dp"
-            />
+            android:layout_gravity="center"
+            android:verticalScrollbarPosition="left"
+            android:fadeScrollbars="true"
+            android:scrollbarSize="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:paddingStart="5dp"
+                android:paddingEnd="10dp">
+
+                <TextView
+                    android:id="@+id/rotation_essentials_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Rotations Essentials"
+                    android:textSize="30sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <include
+                    android:id="@+id/scrollview"
+                    layout="@layout/scrollview_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <TextView
+                    android:id="@+id/notes_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="My Notes"
+                    android:textSize="30sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <EditText
+                    android:id="@+id/my_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Write your notes here..."
+                    android:inputType="textMultiLine"
+                    android:gravity="top|start"
+                    android:padding="16dp"
+                    android:scrollbars="vertical"
+                    android:maxLines="10"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <include
             android:id="@+id/include_bottom_bar"
@@ -38,14 +113,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <FrameLayout
-            android:id="@+id/fragment_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:layout_editor_absoluteX="-64dp"
-            tools:layout_editor_absoluteY="0dp" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"

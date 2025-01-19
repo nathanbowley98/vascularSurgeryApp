@@ -129,7 +129,7 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
      *
      * @see res/layout/scrollview_layout.xml
      */
-    protected Map<String, Button> setupScrollView(Class<ScrollViewButtons.MainActivityButtons> buttonNames) {
+    protected <T extends Enum<T>> Map<String, Button> setupScrollView(Class<T> buttonNames) {
         Map<String, Button> buttonMapping = new HashMap<>();
 
         int layoutHeight = LinearLayout.LayoutParams.WRAP_CONTENT;
@@ -149,7 +149,7 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         drawable.setCornerRadius(16 * density);
         drawable.setColor(hexBackgroundColor);
 
-        for (Enum<?> value: Objects.requireNonNull(buttonNames.getEnumConstants())) {
+        for (Object value: Objects.requireNonNull(buttonNames.getEnumConstants())) {
             String buttonName = value.toString();
             Button button = new Button(this);
 

@@ -68,7 +68,9 @@ public class Rotations_Essentials extends AppCompatActivity {
 
     private void createButton(String line, GridLayout rootLayout) {
         String[] values = line.split(",");
-        Article article = new Article(values[0], values[2]);
+        // Since the CSV file has a space after the comma, we need the
+        // substring method to remove that space, otherwise the url won't work
+        Article article = new Article(values[0], values[2].substring(1));
         ARTICLES.add(article);
 
         // Create and add a button
@@ -88,9 +90,7 @@ public class Rotations_Essentials extends AppCompatActivity {
                 String url = article.getUrl();
 
                 if (!url.startsWith("http://") && !url.startsWith("https://")) {
-                    Log.e("Original URL", url);
                     url = "http://" + url;
-                    Log.e("URL AFTER ERROR CHECK", url);
                 }
 
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));

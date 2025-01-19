@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
@@ -75,13 +76,15 @@ public class Rotations_Essentials extends AppCompatActivity {
 
         // Create and add a button
         Button button = new Button(this);
+        button.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL);
         button.setText(article.getTitle());
         GridLayout.LayoutParams params = new GridLayout.LayoutParams();
-        params.width = GridLayout.LayoutParams.WRAP_CONTENT;
-        params.height = GridLayout.LayoutParams.WRAP_CONTENT;
+        params.width = 0;
+        params.height = 300;
+        params.columnSpec = GridLayout.spec(GridLayout.UNDEFINED, 1f);
         params.setMargins(8, 8, 8, 8);
-        // Set margins if needed
-        // button.setLayoutParams(params);
+        button.setLayoutParams(params);
+        button.setBackgroundResource(R.drawable.article_buttons);
 
         // Set an OnClickListener to open the URL
         button.setOnClickListener(new View.OnClickListener() {

@@ -4,7 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -15,12 +22,15 @@ import androidx.appcompat.widget.SearchView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.vascularsurgeryproject.common.ScrollViewButtons;
 import com.example.vascularsurgeryproject.fragments.AboutFragment;
 import com.example.vascularsurgeryproject.fragments.HomeFragment;
 import com.example.vascularsurgeryproject.fragments.SettingsFragment;
 import com.example.vascularsurgeryproject.fragments.ShareFragment;
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -116,15 +126,70 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
 
     /**
      * Gets the scrollview where buttons are going to be inserted
-     * Remove the placeholder buttons in scrollview_layout.xml,
-     * make sure you are in code mode not design!
+     *
      * @see res/layout/scrollview_layout.xml
      */
-    protected void setupScrollView() {
+    protected Map<String, Button> setupScrollView(Class<ScrollViewButtons.MainActivityButtons> buttonNames) {
+        Map<String, Button> buttonMapping = new HashMap<>();
+
+        int layoutHeight = LinearLayout.LayoutParams.WRAP_CONTENT;
+        int layoutWidth = LinearLayout.LayoutParams.MATCH_PARENT;
+        float density = getResources().getDisplayMetrics().density;
+
+        int hexBackgroundColor = Color.parseColor("#AE94E2");
+        int hexTextColor = Color.parseColor("#FFFFFF");
+
         LinearLayout linearLayout = findViewById(R.id.scrollview_container);
-        //linearlayout container which is the container inside
-        //scrollview and holds the buttons
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(layoutWidth, layoutHeight);
+        params.setMargins(0,0,0,(int) (10 * density));
+        params.height = (int) (80 * density);
+
+        GradientDrawable drawable = new GradientDrawable();
+        drawable.setShape(GradientDrawable.RECTANGLE);
+        drawable.setCornerRadius(16 * density);
+        drawable.setColor(hexBackgroundColor);
+
+        for (Enum<?> value: Objects.requireNonNull(buttonNames.getEnumConstants())) {
+            String buttonName = value.toString();
+            Button button = new Button(this);
+
+            //Setting test
+            button.setText(buttonName);
+            button.setTransformationMethod(null);
+
+            int buttonId = View.generateViewId();
+            button.setId(buttonId); // Assign the generated ID
+
+            //Setting tag so we can call it
+            String buttonTag = buttonName.replace(" ", "_");
+            button.setTag(buttonTag);
+
+            //Setting Color
+            button.setBackgroundColor(hexBackgroundColor);
+            button.setTextColor(hexTextColor);
+
+            //Give rounded edge to match the design
+            button.setBackground(drawable);
+
+            buttonMapping.put(buttonTag, button);
+
+            //Create the button
+            button.setLayoutParams(params);
+            linearLayout.addView(button);
+        }
+
+        return buttonMapping;
     }
+
+    public void bindButtonListener (Button buttonObj, Intent intentObj) {
+        buttonObj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intentObj);
+            }
+        });
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();

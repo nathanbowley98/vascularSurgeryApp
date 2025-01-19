@@ -14,11 +14,12 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.vascularsurgeryproject.common.ScrollViewButtons;
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends BaseActivity {
-    private Button goPageButton;
+import java.util.Map;
 
+public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,56 +27,35 @@ public class MainActivity extends BaseActivity {
 
         // Find the toolbar and set it as the ActionBar
         setupToolbar();
-        setupScrollView();
+        Map<String, Button> buttonMapping = setupScrollView(ScrollViewButtons.MainActivityButtons.class);
         setupBottomBar();
 
-        goPageButton = findViewById(R.id.Rotations_Essentials);
-        goPageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Rotations_Essentials.class));
-            }
-        });
+        // programatically binds the buttons
+        for (Map.Entry<String, Button> entry: buttonMapping.entrySet()) {
+            String buttonName = entry.getKey();
+            Button buttonObj = entry.getValue();
 
-        goPageButton = findViewById(R.id.Anatomy);
-        goPageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Anatomy.class));
+            switch(buttonName) {
+                case "Rotations_Essentials":
+                    bindButtonListener(buttonObj, new Intent(MainActivity.this, Rotations_Essentials.class));
+                break;
+                case "Anatomy":
+                    bindButtonListener(buttonObj, new Intent(MainActivity.this, Anatomy.class));
+                break;
+                case "Physiology":
+                    bindButtonListener(buttonObj, new Intent(MainActivity.this, Physiology.class));
+                break;
+                case "Pathophysiology":
+                    bindButtonListener(buttonObj, new Intent(MainActivity.this, Pathophysiology.class));
+                break;
+                case "Clinical_Reference":
+                    bindButtonListener(buttonObj, new Intent(MainActivity.this, Clinical_Reference.class));
+                break;
+                case "Diagnostics_and_Imaging":
+                    bindButtonListener(buttonObj, new Intent(MainActivity.this, Diagnostics_and_Imaging.class));
+                break;
             }
-        });
-
-        goPageButton = findViewById(R.id.Physiology);
-        goPageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Physiology.class));
-            }
-        });
-
-        goPageButton = findViewById(R.id.Pathophysiology);
-        goPageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Pathophysiology.class));
-            }
-        });
-
-        goPageButton = findViewById(R.id.Clinical_Reference);
-        goPageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Clinical_Reference.class));
-            }
-        });
-
-        goPageButton = findViewById(R.id.Diagnostics_and_Imaging);
-        goPageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Diagnostics_and_Imaging.class));
-            }
-        });
+        }
     }
 
     @Override

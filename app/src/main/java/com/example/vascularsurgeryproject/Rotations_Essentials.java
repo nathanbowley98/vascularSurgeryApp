@@ -3,6 +3,7 @@ package com.example.vascularsurgeryproject;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,13 +32,13 @@ public class Rotations_Essentials extends BaseActivity {
 
             switch(buttonName) {
                 case "ABI_Scores":
-                    bindButtonListener(buttonObj, new Intent(Rotations_Essentials.this, ABI_Scores.class));
+                    bindButtonListener(buttonObj, new Intent(this, ABI_Scores.class));
                 break;
                 case "Peripheral_Exam_B":
-                    bindButtonListener(buttonObj, new Intent(Rotations_Essentials.this, Peripheral_Exam_B.class));
+                    bindButtonListener(buttonObj, new Intent(this, Peripheral_Exam_B.class));
                 break;
                 case "Common_Blood_Work_Int":
-                    bindButtonListener(buttonObj, new Intent(Rotations_Essentials.this, Common_Bloodwork.class));
+                    bindButtonListener(buttonObj, new Intent(this, Common_Bloodwork.class));
                 break;
             }
         }

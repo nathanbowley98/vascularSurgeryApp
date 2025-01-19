@@ -1,10 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Rotations_Essentials">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+<!--    Creates Toolbar-->
+        <include
+            android:id="@+id/include_toolbar"
+            layout="@layout/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp" />
+
+<!--                These are the page buttons in home, scroll functionality might be needed later-->
+<!--        <include-->
+<!--            android:id="@+id/rootLayout"-->
+<!--            layout=""-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            />-->
+
+<!--     This is where the buttons will be generated.-->
+
+        <GridLayout
+            android:id="@+id/articleButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="75dp"
+            android:alignmentMode="alignBounds"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+<!--            <Button-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="200dp"-->
+<!--                android:layout_columnWeight="1"-->
+<!--                android:text="Button Text"-->
+<!--                android:background="@drawable/article_buttons" />-->
+
+<!--            Copy and paste the button to create more-->
+        </GridLayout>
+
+        <!-- Bottom Bar -->
+        <include
+            android:id="@+id/include_bottom_bar"
+            layout="@layout/bottom_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

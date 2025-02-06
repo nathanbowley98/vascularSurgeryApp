@@ -1,129 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/drawer_layout"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="start"
     tools:context=".Rotations_Essentials">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <include
-            android:id="@+id/include_toolbar"
-            layout="@layout/toolbar_layout"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"/>
-
-    </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <ScrollView
-            xmlns:android="http://schemas.android.com/apk/res/android"
+<!--    Creates Toolbar-->
+        <include
+            android:id="@+id/include_toolbar"
+            layout="@layout/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp" />
+
+<!--                These are the page buttons in home, scroll functionality might be needed later-->
+<!--        <include-->
+<!--            android:id="@+id/rootLayout"-->
+<!--            layout=""-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            />-->
+
+<!--     This is where the buttons will be generated.-->
+
+        <GridLayout
+            android:id="@+id/articleButtons"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="80dp"
-            android:layout_marginBottom="80dp"
-            android:layout_gravity="center"
-            android:verticalScrollbarPosition="left"
-            android:fadeScrollbars="true"
-            android:scrollbarSize="10dp">
+            android:layout_marginTop="75dp"
+            android:alignmentMode="alignBounds"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:padding="8dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="vertical"
-                android:paddingStart="5dp"
-                android:paddingEnd="10dp">
+<!--            <Button-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="200dp"-->
+<!--                android:layout_columnWeight="1"-->
+<!--                android:text="Button Text"-->
+<!--                android:background="@drawable/article_buttons" />-->
 
-                <TextView
-                    android:id="@+id/rotation_essentials_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Rotations Essentials"
-                    android:textSize="30sp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
+<!--            Copy and paste the button to create more-->
+        </GridLayout>
 
-                <include
-                    android:id="@+id/scrollview"
-                    layout="@layout/scrollview_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    />
-
-                <TextView
-                    android:id="@+id/notes_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="My Notes"
-                    android:textSize="30sp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
-
-                <EditText
-                    android:id="@+id/my_notes"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="Write your notes here..."
-                    android:inputType="textMultiLine"
-                    android:gravity="top|start"
-                    android:padding="16dp"
-                    android:scrollbars="vertical"
-                    android:maxLines="10"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent" />
-            </LinearLayout>
-        </ScrollView>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        <!-- Bottom Bar -->
         <include
             android:id="@+id/include_bottom_bar"
             layout="@layout/bottom_bar_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-    </LinearLayout>
-
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:visibility="visible"
-        app:headerLayout="@layout/nav_header"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"
-        app:menu="@menu/nav_menu" />
-
-</androidx.drawerlayout.widget.DrawerLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

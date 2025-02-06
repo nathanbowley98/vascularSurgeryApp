@@ -114,7 +114,9 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         // Set a click listener for the middle button
         btnStar.setOnClickListener(v -> {
             // Show a toast message when the middle button is pressed
-            Toast.makeText(this, "Middle button pressed!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Favorites view", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, Favorites.class);
+            startActivity(intent);
         });
 
         // Set a click listener for the right button
@@ -232,6 +234,8 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
         } else if (itemId == R.id.nav_settings) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).commit();
+        } else if (itemId == R.id.nav_favorites) {
+            startActivity(new Intent(BaseActivity.this, Favorites.class));
         } else if (itemId == R.id.nav_share) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ShareFragment()).commit();
         } else if (itemId == R.id.nav_about) {

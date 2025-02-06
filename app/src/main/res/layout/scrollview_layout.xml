@@ -11,7 +11,10 @@
     android:fadeScrollbars="false"
     android:scrollbarSize="10dp"
     >
-    <!--   Needed by ScrollView     -->
+    <!--
+        Needed by ScrollView, this is being programatically
+        inside the classes that need it
+    -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,65 +23,5 @@
         android:paddingStart="14dp"
         android:paddingEnd="5dp"
         >
-        <!--
-                Replace buttons here!
-                Needed to hardcode just
-                to show that scroll works,
-                replace as needed :)
-        -->
-        <Button
-            android:id="@+id/Rotations_Essentials"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="#AE94E2"
-            android:text="@string/Rotations_Essentials"
-            android:textColor="#FFFFFF" />
-
-        <Button
-            android:id="@+id/Anatomy"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="#AE94E2"
-            android:text="@string/Anatomy"
-            android:textColor="#FFFFFF" />
-
-        <Button
-            android:id="@+id/Physiology"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="#AE94E2"
-            android:text="@string/Physiology"
-            android:textColor="#FFFFFF" />
-
-        <Button
-            android:id="@+id/Pathophysiology"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="#AE94E2"
-            android:text="@string/Pathophysiology"
-            android:textColor="#FFFFFF" />
-
-        <Button
-            android:id="@+id/Clinical_Reference"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="#AE94E2"
-            android:text="@string/Clinical_Reference"
-            android:textColor="#FFFFFF" />
-
-        <Button
-            android:id="@+id/Diagnostics_and_Imaging"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="#AE94E2"
-            android:text="@string/Diagnostics_and_Imaging"
-            android:textColor="#FFFFFF" />
-
     </LinearLayout>
 </ScrollView>

@@ -26,6 +26,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
 
         // Find the toolbar and set it as the ActionBar
+
         setupToolbar();
         Map<String, Button> buttonMapping = setupScrollView(ScrollViewButtons.MainActivityButtons.class);
         setupBottomBar();

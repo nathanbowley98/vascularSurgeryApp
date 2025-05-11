@@ -7,7 +7,10 @@ public class ScrollViewButtons {
         PHYSIOLOGY("Physiology"),
         PATHOPHYSIOLOGY("Pathophysiology"),
         CLINICAL_REFERENCE("Clinical Reference"),
-        DIAGNOSTICS_AND_IMAGING("Diagnostics and Imaging");
+        DIAGNOSTICS_AND_IMAGING("Diagnostics and Imaging"),
+        EXAM_AND_SKILLS("Exam and Skills"),
+        ANATOMY_VIEWER("3D Anatomy Viewer"),
+        NEW_IN_VASCULAR_SURGERY("New in vascular surgery");
 
         private final String name;
 

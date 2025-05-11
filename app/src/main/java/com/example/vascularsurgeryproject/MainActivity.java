@@ -26,7 +26,6 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
 
         // Find the toolbar and set it as the ActionBar
-
         setupToolbar();
         Map<String, Button> buttonMapping = setupScrollView(ScrollViewButtons.MainActivityButtons.class);
         setupBottomBar();
@@ -39,22 +38,31 @@ public class MainActivity extends BaseActivity {
             switch(buttonName) {
                 case "Rotations_Essentials":
                     bindButtonListener(buttonObj, new Intent(MainActivity.this, Rotations_Essentials.class));
-                break;
+                    break;
                 case "Anatomy":
                     bindButtonListener(buttonObj, new Intent(MainActivity.this, Anatomy.class));
-                break;
+                    break;
                 case "Physiology":
                     bindButtonListener(buttonObj, new Intent(MainActivity.this, Physiology.class));
-                break;
+                    break;
                 case "Pathophysiology":
                     bindButtonListener(buttonObj, new Intent(MainActivity.this, Pathophysiology.class));
-                break;
+                    break;
                 case "Clinical_Reference":
                     bindButtonListener(buttonObj, new Intent(MainActivity.this, Clinical_Reference.class));
-                break;
+                    break;
                 case "Diagnostics_and_Imaging":
                     bindButtonListener(buttonObj, new Intent(MainActivity.this, Diagnostics_and_Imaging.class));
-                break;
+                    break;
+                case "Exam_and_Skills":
+                    bindButtonListener(buttonObj, new Intent(MainActivity.this, Exam_and_Skills.class));
+                    break;
+                case "Anatomy_Viewer":
+                    bindButtonListener(buttonObj, new Intent(MainActivity.this, Anatomy_Viewer.class));
+                    break;
+                case "New_in_Vascular_Surgery":
+                    bindButtonListener(buttonObj, new Intent(MainActivity.this, New_in_Vascular_Surgery.class));
+                    break;
             }
         }
     }

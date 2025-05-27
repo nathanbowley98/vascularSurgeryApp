@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Pathophysiology">
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Pathophysiology">
 
     <!-- Toolbar -->
     <include
@@ -18,7 +19,7 @@
         android:id="@+id/mainPageTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Pathophysiology"
+        android:text="@string/Aortic_Dissection"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
@@ -40,19 +41,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <LinearLayout
-            android:id="@+id/mainPageButtons"
+        <include
+            android:id="@+id/textContent"
+            layout="@layout/scrollview_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:translationY="200dp">
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="178dp"
+            android:layout_marginBottom="80dp"
+            />
 
-<!--            Uncomment to see how a button would look-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+            <!--            Uncomment to see how a button would look-->
 <!--            <include-->
-<!--                layout="@layout/activity_subpage_button"-->
+<!--                layout="@layout/activity_text_block"-->
 <!--                android:layout_width="match_parent"-->
 <!--                android:layout_height="wrap_content" />-->
-        </LinearLayout>
+<!--        </LinearLayout>-->
     </LinearLayout>
 
     <!-- Bottom Bar -->

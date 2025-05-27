@@ -1,0 +1,49 @@
+<start>
+Definition
+An aortic dissection occurs when there is a tear in the inner layer of the aortic walls. This tear will allow blood to enter between the inner and middle layer of the aorta, causing the layers to separate or “dissect.”
+
+Aortic Dissection has two types:
+
+	Type A: where the dissection occurs in the ascending part of the aorta.
+	Type B: the dissection occurs in the lower (descending) part of the aorta.
+
+Clinically speaking, type A is more severe and dangerous than type B due to the dissection’s close proximity to the heart.
+
+Aortic Dissection can also be separated into acute and chronic depending on their onset. Typically type A is often acute and type B is more chronic.
+<end>
+<start>
+Epidemiology
+People over the age of 60 are more likely to have aortic dissection than those who are under, with the most important risk factor being hypertension, which increases the pressure within the aorta itself, causing it to tear. Some genetic dispositions that increase the chance of developing aortic dissection includes: Turner syndrome, Marfan syndrome and Ehlers-Danlos syndrome.
+
+Other risk factors include:
+Atherosclerosis
+Aortic aneurysm
+Bicuspid aortic valve
+Aortic coarctation
+Men are more likely to have aortic dissection than women.
+Cocaine use
+Smoking
+Hypercholesterolaemia
+Infrequently seen in pregnant women, related with preeclampsia
+High-intensity weightlifting due to increase in blood pressure during lifting
+
+Aortic dissection has a high mortality rate, with 21% of patients die prior to hospital admission.
+<end>
+<start>
+Pathophysiology
+When the lining of the aorta tears, blood can push through the tear, separating (dissecting) the middle layer of the wall from the still intact outer layer. As a result, a new, false channel forms in the wall of the aorta. As the aortic dissection lengthens along the aorta, it can close off the points at which one or more arteries branch off from the aorta, blocking blood flow.
+<end>
+<start>
+Clinical Presentation
+Acute: A sudden onset of severe chest pain. The pain may radiate to the jaw, neck, and/or back. Some individuals may also experience LOC, shortness of breath, and symptoms such as difficulties with speaking and weakness that mirrors that of a stroke.
+Chronic: Symptoms of chronic aortic dissection persist beyond 14 days of the initial event, when the first signs of dissection may be noticed. These symptoms can include abdominal, back, or chest pain. There also may be no symptoms. Sometimes symptoms of an aortic dissection are vague and nonspecific and may go unnoticed until the tear begins to cause other symptoms, such as sweating, shortness of breath, or fainting.
+<end>
+<start>
+Diagnosis
+Due to its high mortality, a prompt diagnosis is required for aortic dissection. An X-ray may show widening of the aorta which should raise flags for possible aortic dissection. Other tests include TEE, CT or MRA.
+<end>
+<start>
+Management
+Aortic dissection requires urgent surgery if confirmed. In surgery, the dissected section of the aorta is removed, and the aorta is reconstructed with a graft.
+Beta-blockers may slow down the progression of aortic dissection prior to surgery.
+<end>

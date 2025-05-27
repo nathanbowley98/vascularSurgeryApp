@@ -10,7 +10,7 @@ public class ScrollViewButtons {
         DIAGNOSTICS_AND_IMAGING("Diagnostics and Imaging"),
         EXAM_AND_SKILLS("Exam and Skills"),
         ANATOMY_VIEWER("3D Anatomy Viewer"),
-        NEW_IN_VASCULAR_SURGERY("New in vascular surgery");
+        NEW_IN_VASCULAR_SURGERY("New in Vascular Surgery");
 
         private final String name;
 
@@ -32,6 +32,21 @@ public class ScrollViewButtons {
         private final String name;
 
         RotationEssentialsButtons(String name) {
+            this.name = name;
+        }
+
+        @Override
+        public String toString() {
+            return name;
+        }
+    }
+
+    public enum PathophysiologyButtons {
+        ANTHROSCLEROSIS("Anthrosclerosis");
+
+        private final String name;
+
+        PathophysiologyButtons(String name) {
             this.name = name;
         }
 

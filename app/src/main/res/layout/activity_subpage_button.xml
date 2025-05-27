@@ -28,6 +28,5 @@
                 android:text="Button Content"
                 android:textSize="20sp" />
         </FrameLayout>
-
     </LinearLayout>
 </LinearLayout>

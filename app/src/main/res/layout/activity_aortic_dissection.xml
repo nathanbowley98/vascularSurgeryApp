@@ -41,19 +41,27 @@ tools:context=".Pathophysiology">
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <LinearLayout
-            android:id="@+id/mainPageButtons"
+        <include
+            android:id="@+id/textContent"
+            layout="@layout/scrollview_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:translationY="200dp">
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="178dp"
+            android:layout_marginBottom="80dp"
+            />
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
 
             <!--            Uncomment to see how a button would look-->
-            <!--            <include-->
-            <!--                layout="@layout/activity_subpage_button"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content" />-->
-        </LinearLayout>
+<!--            <include-->
+<!--                layout="@layout/activity_text_block"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content" />-->
+<!--        </LinearLayout>-->
     </LinearLayout>
 
     <!-- Bottom Bar -->

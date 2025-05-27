@@ -1,4 +1,6 @@
 package com.example.vascularsurgeryproject;
 
-public class Exam_and_Skills {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Exam_and_Skills  extends AppCompatActivity {
 }

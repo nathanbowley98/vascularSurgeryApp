@@ -1,4 +1,6 @@
 package com.example.vascularsurgeryproject;
 
-public class Anatomy_Viewer {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Anatomy_Viewer  extends AppCompatActivity {
 }

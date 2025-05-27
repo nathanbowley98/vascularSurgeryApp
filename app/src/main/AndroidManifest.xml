@@ -34,6 +34,15 @@
             android:name=".Rotations_Essentials"
             android:exported="false" />
         <activity
+            android:name=".Exam_and_Skills"
+            android:exported="false" />
+        <activity
+            android:name=".Anatomy_Viewer"
+            android:exported="false" />
+        <activity
+            android:name=".New_in_Vascular_Surgery"
+            android:exported="false" />
+        <activity
             android:name=".Common_Bloodwork"
             android:exported="false" />
         <activity

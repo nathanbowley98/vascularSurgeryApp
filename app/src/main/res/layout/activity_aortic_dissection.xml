@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Pathophysiology">
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Pathophysiology">
 
     <!-- Toolbar -->
     <include
@@ -18,7 +19,7 @@
         android:id="@+id/mainPageTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Pathophysiology"
+        android:text="@string/Aortic_Dissection"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
@@ -47,11 +48,11 @@
             android:orientation="vertical"
             android:translationY="200dp">
 
-<!--            Uncomment to see how a button would look-->
-<!--            <include-->
-<!--                layout="@layout/activity_subpage_button"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content" />-->
+            <!--            Uncomment to see how a button would look-->
+            <!--            <include-->
+            <!--                layout="@layout/activity_subpage_button"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content" />-->
         </LinearLayout>
     </LinearLayout>
 

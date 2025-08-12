@@ -1,29 +1,42 @@
 package com.example.vascularsurgeryproject;
 
-import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
-import android.widget.GridLayout;
-import android.widget.Toast;
+import android.widget.LinearLayout;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+public class Rotations_Essentials extends BaseActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_rotations_essentials);
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
+        LinearLayout buttonContainer = findViewById(R.id.mainPageButtons);
+        LayoutInflater inflater = LayoutInflater.from(this);
+        String[] btnNames = {"ABI Scores", "Peripheral Exam B", "Common Blood Work Int"};
 
-import com.example.vascularsurgeryproject.rotationsEssentials.Article;
+        for (String btnName : btnNames) {
+            // Inflate the subpage button layout
+            View buttonLayout = inflater.inflate(R.layout.activity_subpage_button, buttonContainer, false);
+            Button button = buttonLayout.findViewById(R.id.pageBtn);
+            button.setText(btnName);
 
-public class Rotations_Essentials extends AppCompatActivity {
+            switch (btnName) {
+                case "ABI Scores":
+                    bindButtonListener(button, new Intent(Rotations_Essentials.this, ABI_Scores.class));
+                    break;
+                case "Peripheral Exam B":
+                    bindButtonListener(button, new Intent(Rotations_Essentials.this, Peripheral_Exam_B.class));
+                    break;
+                case "Common Blood Work Int":
+                    bindButtonListener(button, new Intent(Rotations_Essentials.this, Common_Bloodwork.class));
+                    break;
+            }
+
+            // Add to parent layout
+            buttonContainer.addView(buttonLayout);
+        }
+    }
 }

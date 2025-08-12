@@ -1,12 +1,8 @@
 package com.example.vascularsurgeryproject;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
-import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -20,6 +16,10 @@ public class Aortic_Dissection extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aortic_dissection);
+
+        // Find the toolbar and set it as the ActionBar
+        setupToolbar();
+        setupBottomBar();
 
         try {
             populatePage();
@@ -59,7 +59,7 @@ public class Aortic_Dissection extends BaseActivity {
                 // Reset saved text
                 contentTitle = "";
                 content = new StringBuilder();
-            } else if (content.toString().equals("<start>")) {
+            } else if (content.toString().equals("<start>\n")) {
                 // If this condition is met, then the last line was <start>, so now we are at
                 // the title of a new text section
                 contentTitle = line;
@@ -68,6 +68,7 @@ public class Aortic_Dissection extends BaseActivity {
                 // In the middle of a text section, simply add the current line to our saved
                 // content
                 content.append(line);
+                content.append("\n");
             }
         }
     }
